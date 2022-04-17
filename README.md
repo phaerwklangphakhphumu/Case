@@ -1,0 +1,2 @@
+# Case
+RegExpStringBetween($sString, $sStart, $sEnd, $fCase = False)     $sStart = StringRegExp($sString, $sStart, 1)[0]     If @error Then Return SetError(1, 0, False)      $sEnd = StringRegExp($sString, $sEnd, 1)[0]     If @error Then Return SetError(2, 0, False)      ; Set correct case sensitivity     If $fCase = Default Then         $fCase = False     EndIf     Local $sCase = "(?is)"     If $fCase Then         $sCase = "(?s)"     EndIf
